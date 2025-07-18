@@ -68,14 +68,46 @@ Vehicle Tracking with DeepSORT and SSD MobileNet.ipynb  # SSD MobileNet + DeepSO
 
 ---
 
-## Workflow
+## Usage
 
-1. Select your preferred detection/tracking notebook.
-2. Install dependencies (see the first cell of each notebook for pip commands).
-3. Download or place required model weights in the `models/` directory (for SSD MobileNet).
-4. Add your input video to `video data/` or the project root.
-5. Run the notebook in Jupyter or Google Colab.
-6. Review output videos in the `outputs/` folder, featuring annotated detections, unique IDs, and vehicle counts.
+### Prerequisites
+- Python 3.7+
+- Jupyter Notebook or Google Colab
+- (Recommended) NVIDIA GPU with CUDA for acceleration
+
+### Step-by-Step Instructions
+
+1. **Clone the repository:**
+   ```bash
+   git clone <repo-url>
+   cd Vehicle-counter-video-analytics-main
+   ```
+
+2. **Prepare model weights:**
+   - For SSD MobileNet + DeepSORT, download `MobileNetSSD_deploy.caffemodel` and `MobileNetSSD_deploy.prototxt` and place them in the `models/` directory.
+   - For YOLOv5 and Faster R-CNN, weights are downloaded automatically by the notebooks.
+
+3. **Add your input video:**
+   - Place your video file (e.g., `myvideo.mp4`) in the `video data/` directory or the project root.
+
+4. **Open the desired notebook:**
+   - Launch Jupyter Notebook:
+     ```bash
+     jupyter notebook
+     ```
+   - Or upload the notebook to Google Colab.
+
+5. **Install dependencies:**
+   - Each notebook contains a cell with the required `pip install` commands. Run this cell first.
+
+6. **Configure input/output paths (if needed):**
+   - Update the video file path in the notebook code if you are using a custom video.
+
+7. **Run all cells:**
+   - Execute the notebook cells sequentially. The output video will be saved in the working directory or `outputs/` folder.
+
+#### Example Output
+- After running, you will find annotated videos such as `output_deepsort.mp4`, `output_counted.mp4`, or `output.mp4` in the `outputs/` directory, each with bounding boxes, unique IDs, and vehicle counts overlayed.
 
 ---
 
@@ -114,6 +146,11 @@ Vehicle Tracking with DeepSORT and SSD MobileNet.ipynb  # SSD MobileNet + DeepSO
 - You can use your own videos by placing them in `video data/` and updating the input path in the notebooks.
 - Output videos are saved in the working directory or `outputs/` folder.
 - Each notebook is designed for clarity and ease of modification for research or production.
+
+---
+
+## Contributing
+Contributions are welcome! If you have suggestions for improvements, bug fixes, or new features, please open an issue or submit a pull request. When contributing code, ensure it is well-documented and tested. For major changes, please discuss them via an issue first to ensure alignment with the project's direction.
 
 ---
 
